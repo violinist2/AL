@@ -7,7 +7,7 @@
     color: black;
     font-weight: normal;
     background:rgba(204, 209, 198, 0.3);
-    /* position: relative; */
+    position: relative; 
     
 }
 
@@ -53,9 +53,6 @@ li {
 }
 
 
-
-
-@media (min-width:650px) {
 .up-header {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -74,11 +71,8 @@ li {
    
     
 }
-}
 
 
-
-@media (min-width:650px) {
 .header-title {
     color: white;
     text-transform: uppercase;
@@ -86,7 +80,7 @@ li {
     position: relative;
     font-size: 29px;
 }
-}
+
 
 .header-title::before {
     content:"";
@@ -99,7 +93,11 @@ li {
     height: 30px;
 }
 
-
+.logo-img {
+    width:184px;
+    object-fit: contain;
+    height: 103px;
+}
 
 .add-artist {
     font-size: 1em;
@@ -158,10 +156,8 @@ li {
     background-color: #4eb543;
     margin-bottom: 10px;
     font-size: 1.25em;
-    /*min-width: 230px;*/
     text-transform: uppercase;
     text-align: center;
-    /*border-radius: 12px;*/
     line-height: 2;
     border: 2px solid #d7eb9c;
     padding: 5px;
@@ -446,8 +442,6 @@ li {
 .find {
     -webkit-box-shadow: 2px 1px 2px rgba(0, 0, 0, 0.5);
             box-shadow: 2px 1px 2px rgba(0, 0, 0, 0.5);
-    /*text-align: center;*/
-    /*background: #0dff21;*/
     background-image: -webkit-gradient(linear, left top, left bottom, from(#ff7168), color-stop(#de0000), to(#a70000));
     background-image: linear-gradient(#ff7168, #de0000, #a70000);
     /*line-height: 1.2;*/
@@ -463,9 +457,7 @@ li {
 }
 
 .find:hover {
-    /*background: white;*/
     background: #00ad7a;
-    /*background: #00dc00;*/
     -webkit-transition-property: background, color;
     transition-property: background, color;
     -webkit-transition-duration: 1s;
@@ -931,14 +923,14 @@ margin-top:1px;
 }
 
 .artist-phone {
-    width: 400px;
+    width: 350px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
-    /*margin-left: 40px;*/
+    text-align: left;
     font-size: 20px;
     line-height: 18px;
 }
@@ -956,13 +948,10 @@ margin-top:1px;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    /*width: 700px;*/
+white-space: pre-wrap;
 }
 
-.price-artist {
-    font-size: 20px;
 
-}
 
 
 .mail {
@@ -993,7 +982,6 @@ margin-top:1px;
     -webkit-box-pack:center;
         -ms-flex-pack:center;
             justify-content:center;
-    /*font-size: 16px;*/
 }
 
 .mail a:hover {
@@ -1005,6 +993,8 @@ margin-top:1px;
 .price-artist {
     font-size: 19px;
     line-height: 20px;
+    width: 200px;
+    color: black;
 }
 
 .slider {
@@ -1212,7 +1202,7 @@ margin-top:1px;
 }
 
 img {
-    width: 100%;
+    background: gray;
     display: block;
 }
 
@@ -1237,7 +1227,6 @@ img {
     margin-right: 0px;
    -ms-flex-pack: distribute;
         justify-content: space-around;
-    /*width: 700px;*/
     margin-bottom: 40px;
 }
 
@@ -1261,15 +1250,13 @@ img {
 
 .pop-up {
     position: absolute;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
     background: white;
-    /*background: rgba(0, 0, 0, 0.3);*/
+    margin: auto;
     display: none;
-    /*position: fixed;*/
-    top: 50%;
-    left: 50%;
-    /*display: flex;*/
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -1278,12 +1265,15 @@ img {
     padding: 20px 25px 20px 25px;
     -webkit-box-shadow: 2px 2px 3px rgba(19, 19, 19, 0.9);
             box-shadow: 2px 2px 3px rgba(19, 19, 19, 0.9);
-    font-family: "PT Sans";
+    font-family: "PT Sans", Arial, Helvetica, sans-serif;
     font-size: 13px;
-    /*box-sizing: border-box;*/
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     z-index: 400;
+    transition: opacity 200ms ease-in; 
+    overflow-y: auto;
+    width: 600px;;
+    height: 1200px;
 }
 
 .pop-up-close {
@@ -1300,7 +1290,6 @@ img {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    /*height: 900px;*/
 }
 
 .pop-up-close::before,
