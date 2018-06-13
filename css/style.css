@@ -819,12 +819,14 @@ margin-top:1px;
 }
 
 .item-title {
+    margin-left: 30px;
     opacity: 0.5;
-     color: black;
+    color: black;
     font-size: 18px;
 }
 
 .item-genre {
+    margin-left: 30px;
     color: black;
     opacity: 0.5;
 }
@@ -982,7 +984,8 @@ white-space: pre-wrap;
     -webkit-box-pack:center;
         -ms-flex-pack:center;
             justify-content:center;
-}
+border-radius: 10px;
+        }
 
 .mail a:hover {
     background: #3f3493; 
@@ -991,10 +994,13 @@ white-space: pre-wrap;
 }
 
 .price-artist {
+    padding: 10px;
+    border-radius: 30px;
+    border:3px solid gray;
     font-size: 19px;
     line-height: 20px;
-    width: 200px;
-    color: black;
+    text-align:center;
+    color: gray;
 }
 
 .slider {
@@ -1548,3 +1554,23 @@ filter: hue-rotate(35deg);
     margin-top: 120px;
 }
 
+.base-words {
+    border-top: 1px solid gainsboro;
+    color:gray;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-left: 20px;
+
+}
+
+.base-words__link {
+    color: gray;
+    text-decoration: underline; 
+    font-size: 22px;
+    background: gainsboro;
+}
+
+.base-words__link:hover {
+    color:rgba(0, 0, 0, 0.9);
+    text-decoration: underline;
+}
