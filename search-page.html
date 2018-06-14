@@ -8,6 +8,8 @@
     <link href="https://fonts.googleapis.com/css?family=Cuprum|PT+Sans" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-3.3.1.min.js"></script>
+   
 </head>
 
 <body>
@@ -85,7 +87,10 @@
                     <a href="index.html">
                         <div class="center-column__house">&#127968; Новый поиск &#11119;</div>
                     </a>
-                    <div class="center-column__filter-price">Расположить по цeне:<span> &#8593;</span><span> &#8595;</span></div>
+                    <div class="center-column__filter-price">Расположить по цeне:
+                        <button id="аscending">&#8593;</button>
+                        <button id="descending">&#8595;</dutton>
+                    </div>
                     <div class="center-column__card">
                         <a href="#" class="center-column__link">
                             <div class="center-column__who"><span class="center-column__style"> народные коллективы</span><span class="center-column__price"> 8000 рублей</span><span class="center-column_name"> Иван Иванов</span>
@@ -97,7 +102,7 @@
                     </div>
                     <div class="center-column__card">
                         <a href="#" class="center-column__link">
-                            <div class="center-column__who"><span class="center-column__style"> необычные номера</span><span class="center-column__price"> 1808000 рублей</span><span class="center-column_name"> Екатерина&nbsp;Bарановская</span>
+                            <div class="center-column__who"><span class="center-column__style"> необычные номера</span><span class="center-column__price"> 107000 рублей</span><span class="center-column_name"> Екатерина&nbsp;Bарановская</span>
                             </div>
                             <div class="center-column__img"> 
                                 <img class="center-column__avatar" src="img/3_sm.jpg" width="100" height="100" alt="artist-avatar" title="artist-name">
@@ -124,7 +129,7 @@
                     </div>
                     <div class="center-column__card">
                         <a href="#" class="center-column__link">
-                            <div class="center-column__who"><span class="center-column__style"> танцевальные шоу</span><span class="center-column__price"> 8000 рублей</span><span class="center-column_name"> Иван Иванов</span>
+                            <div class="center-column__who"><span class="center-column__style"> танцевальные шоу</span><span class="center-column__price"> 5000 рублей</span><span class="center-column_name"> Иван Иванов</span>
                             </div>
                             <div class="center-column__img"> 
                                 <img class="center-column__avatar" src="img/2_sm.jpg" width="100" height="100" alt="artist-avatar" title="artist-name">
@@ -135,7 +140,7 @@
                 <div class="additional-right-column">
                     <div class="center-column__card">
                         <a href="#" class="center-column__link">
-                            <div class="center-column__who"><span class="center-column__style"> необычные номера</span><span class="center-column__price"> 1808000 рублей</span><span class="center-column_name"> Екатерина&nbsp;Bарановская</span>
+                            <div class="center-column__who"><span class="center-column__style"> необычные номера</span><span class="center-column__price"> 908000 рублей</span><span class="center-column_name"> Екатерина&nbsp;Bарановская</span>
                             </div>
                             <div class="center-column__img"> 
                                 <img class="center-column__avatar" src="img/3_sm.jpg" width="100" height="100" alt="artist-avatar" title="artist-name">
@@ -144,7 +149,7 @@
                     </div>
                     <div class="center-column__card">
                         <a href="#" class="center-column__link">
-                            <div class="center-column__who"><span class="center-column__style"> необычные номера</span><span class="center-column__price"> 1808000 рублей</span><span class="center-column_name"> Екатерина&nbsp;Bарановская</span>
+                            <div class="center-column__who"><span class="center-column__style"> необычные номера</span><span class="center-column__price"> 18000 рублей</span><span class="center-column_name"> Екатерина&nbsp;Bарановская</span>
                             </div>
                             <div class="center-column__img"> 
                                 <img class="center-column__avatar" src="img/3_sm.jpg" width="100" height="100" alt="artist-avatar" title="artist-name">
@@ -152,6 +157,11 @@
                         </a>
                     </div>
                 </div>
+                <section class="base-words">
+                        <div class="labels">
+                            <a class="base-words__link" href="/seek/danceshow/">танцевальные шоу</a>, <a class="base-words__link" href="/seek/dancers/">танцоры</a> 
+                        <div> 
+                    </section>
             </div>   
         </main>
     <footer class="footer-wrapper">
@@ -270,7 +280,46 @@
             </fieldset>
         </form>
     </div>
+     <script>
+    var item = $('.center-column__price');
+
+    $('#descending').on('click', function () {
+        item.sortElements(function (a, b) {
+            return parseInt($(a).text()) < parseInt($(b).text()) ? 1 : -1;
+        });
+    });
+    $('#аscending').on('click', function () {
+        item.sortElements(function (a, b) {
+            return parseInt($(a).text()) > parseInt($(b).text()) ? 1 : -1;
+        });
+    });
+</script>
 <script src="js/modal-window.js"></script>
+<script src="js/sortElements.js"></script>
+<script>jQuery.fn.sortElements = function () {
+        var sort = [].sort;
+        return function (comparator, getSortable) {
+            getSortable = getSortable || function () {
+                return this;
+            };
+            var placements = this.map(function () {
+                var sortElement = getSortable.call(this),
+                    parentNode = sortElement.parentNode,
+                    nextSibling = parentNode.insertBefore(document.createTextNode(''), sortElement.nextSibling);
+                return function () {
+                    if (parentNode === this) {
+                        throw new Error("You can't sort elements if any one is a descendant of another.");
+                    }
+                    parentNode.insertBefore(this, nextSibling);
+                    parentNode.removeChild(nextSibling);
+                };
+            });
+            return sort.call(this, comparator).each(function (i) {
+                placements[i].call(getSortable.call(this));
+            });
+        };
+    }();
+    </script>
 </body>
 
 </html>
