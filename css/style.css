@@ -1497,7 +1497,7 @@ width: 60%;
 
 .center-column__link:active {
     background: gainsboro;
-    filter: blur(8px);
+    filter: blur(6px);
 
 }
 
