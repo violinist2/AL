@@ -963,7 +963,7 @@ white-space: pre-wrap;
             justify-content:flex-start;
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex;
+    /* display: flex; */
     -webkit-box-align: baseline;
         -ms-flex-align: baseline;
             align-items: baseline;
@@ -1206,7 +1206,6 @@ border-radius: 10px;
 }
 
 img {
-    background: gray;
     display: block;
 }
 
@@ -1571,4 +1570,24 @@ filter: hue-rotate(35deg);
 .base-words__link:hover {
     color:rgba(0, 0, 0, 0.9);
     text-decoration: underline;
+}
+
+.site__link {
+    width: 150px;
+    background-image: linear-gradient(#4d3ec9, #302683); 
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px;
+    color:white;
+    align-self: center;
+    display: flex;
+}
+
+.right-side-contact span {
+    align-self: center;
+}
+
+.mail {
+    margin-bottom: 10px;
+    width: 400px;
 }
