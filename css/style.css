@@ -293,9 +293,9 @@ li {
 
 .left-column li:nth-child(10) {
     background: url("../img/new3.png") no-repeat 19px 8px;
-    display: -webkit-box;
+    /* display: -webkit-box;
     display: -ms-flexbox;
-    display: flex;
+    display: flex; */
     background-color: #4eb543;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -1475,7 +1475,9 @@ width: 60%;
     font-size: 23px;
     display: flex;
     color:white;
-    background: #4eb543;
+    /* background: #4eb543; */
+    color:darkolivegreen;
+    background: gainsboro;
     width: 300px;
     border:1px solid gainsboro;
     margin-right: 20px;
@@ -1488,17 +1490,18 @@ width: 60%;
 
 
 .center-column__card:hover {
-filter: hue-rotate(35deg); 
+    background: transparent;
+    border: 1px solid transparent;
+  
 }
 
 .center-column__link:active {
-    background: #4eb543;
-    filter: hue-rotate(0deg); 
-    filter: opacity(0.8);
+    background: gainsboro;
+    filter: blur(8px);
+
 }
 
 .center-column__filter-price {
-    cursor: pointer;
     color:black;
     line-height: 30px;
     font-size:23px;
@@ -1523,19 +1526,21 @@ filter: hue-rotate(35deg);
 .center-column__link {
     text-align: center;
     display: flex;
-    color: white;
+    color: rgb(57, 59, 53);
     width: 300px;
     text-decoration: none;
 }
 
 .center-column__style {
-   line-height: 30px;
+    padding-top: 5px;
+    line-height: 30px;
     font-size: 20px;
     display: block; 
     width: 200px;
 }
 
 .center-column__price {
+    color: rgb(204, 21, 37);
     line-height: 30px;
     font-size: 30px;
 }
@@ -1553,6 +1558,7 @@ filter: hue-rotate(35deg);
 
 .base-words {
     border-top: 1px solid gainsboro;
+    width: 100%;
     color:gray;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -1591,3 +1597,8 @@ filter: hue-rotate(35deg);
     margin-bottom: 10px;
     width: 400px;
 }
+
+button {
+    cursor: pointer;
+}
+
