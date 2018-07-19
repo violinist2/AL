@@ -1,0 +1,292 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>ArtistList.ru - каталог артистов</title>
+    <meta name="description" content="Каталог-база артистов и услуг для праздников. Найдите лучших артистов для своего мероприятия по оптимальной цене!">
+    <meta name="keywords" content="музыканты на свадьбу, группа свадьба, группа праздник, ведущие канала, ведущие россии, фото ведущих, артисты на свадьбу, фото артистов, анкета артиста, агентства праздников, музыканты, кавер-группы, танцоры, поиск артистов, список артистов, найти артиста, артисты на праздник, артисты на свадьбу, артисты на юбилей недорого, артисты на свадьбу дешево, музыканты на свадьбу, кавер-группы, добавить артиста, добавить артиста в базу, добавить артиста в каталог">
+    <meta name="viewport" content="width=device-width,inital-scale=1.0">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Cuprum|PT+Sans" rel="stylesheet"> -->
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    </head>
+<body>
+<header class="main-header">
+        <div class="container">
+            <div class="up-header">
+                <div class="logo">
+                    <a href="/"><img class="logo-img" src="/img/logo2.png" width="184" height="103" alt="logo"></a>
+                </div>
+                   <a href="/" class="header-title__link"><h2 class="header-title">Каталог артистов ArtistList</h1></a>
+                <div class="header-links">
+                                            <a class="add-artist" href="#">Добавить артиста</a>
+                        <button id="login-open" class="login-open" href="#">войти</button>
+                                        <div class="overlay" id="overlay"></div>
+                </div>
+            </div>
+        </div>
+</header>
+<!-- Конец скрипта шапки -->
+    <main>
+    <div class="container">
+        <div class="breadcrumbs"><a class="links-breadcrumbs" href="/catalog.php">Главная</a></div>
+        <div class="flex-container-catalog">
+<!-- Начало скрипта блока левых категорий -->
+<div class="left-column">
+    <ul>
+        <li><a class="btn-artist" href="/seek/entertainer/">Ведущие</a></li>
+<li><a class="btn-artist" href="/seek/covers/">Кавер-группы</a></li>
+<li><a class="btn-artist" href="/seek/vocal/">Вокалисты</a></li>
+<li><a class="btn-artist" href="/seek/instrumental/">Музыканты</a></li>
+<li><a class="btn-artist" href="/seek/dj/">Диджеи</a></li>
+<li><a class="btn-artist" href="/seek/stars/">Известные артисты</a></li>
+<li><a class="btn-artist" href="/seek/danceshow/">Танцевальные шоу</a></li>
+<li><a class="btn-artist" href="/seek/folk/">Народные коллективы</a></li>
+<li><a class="btn-artist" href="/seek/marvelous/">Необычные номера</a></li>
+<li><a class="btn-artist" href="/seek/#/">Новинки</a></li>
+<li><a class="btn-artist" href="/seek/circus/">Цирковые номера</a></li>
+<li><a class="btn-artist" href="/seek/original/">Оригинальный жанр</a></li>
+<li><a class="btn-artist" href="/seek/animals/">Животные</a></li>
+<li><a class="btn-artist" href="/seek/decor/">Оформление</a></li>
+<li><a class="btn-artist" href="/seek/other/">Прочее</a></li>
+    </ul>
+</div>
+<!-- Конец скрипта блока левых категорий -->
+<!-- Начало скрипта главной страницы -->
+
+                <div class="center-column">
+                    <form class="search-form" action="#" method="get">
+                        <div class="form-title">
+                            <h2 class="title-btn">Найти артиста по цене:</h2>
+                        </div>
+                        <ul class="search-filter-1">
+                            <li><input type="checkbox" name="5" id="five">
+                                <label for="five">до 5000 рублей</label>
+                            </li>
+                            <li><input type="checkbox" name="10" id="ten">
+                                <label for="ten">от 5000-10000 рублей</label>
+                            </li>
+                            <li><input type="checkbox" name="20" id="twenty">
+                                <label for="twenty">от 10000-20000 рублей</label>
+                            </li>
+                            <li><input type="checkbox" name="50" id="fifty">
+                                <label for="fifty">от 20000-50000 рублей</label>
+                            </li>
+                            <li><input type="checkbox" name="100" id="hundred">
+                                <label for="hundred">от 50000-100000 рублей</label>
+                            </li>
+                            <li><input type="checkbox" name="more-100" id="more-hundred">
+                                <label for="more-hundred">более 100000 рублей</label>
+                            </li>
+                        </ul>
+                        <div>
+                            <h2 class="title-btn">По жанру:</h2>
+                        </div>
+                        <ul class="search-filter-2">
+                            <li><input type="checkbox" name="entertainer" id="entertainer">
+                                <label for="entertainer">Ведущие</label>
+                            </li>
+                            <li><input type="checkbox" name="cover-band" id="cover-band"><label for="cover-band">Кавер-группы</label>
+                            </li>
+                            <li><input type="checkbox" name="vocal" id="vocal"><label for="vocal">Вокалисты, вокалистки</label>
+                            </li>
+                            <li><input type="checkbox" name="musican" id="musican"><label for="musican">Музыканты</label>
+                            </li>
+                            <li><input type="checkbox" name="dance-show" id="dance-show"><label for="dance-show">Танцевальные шоу</label>
+                            </li>
+                            <li><input type="checkbox" name="unusual-numbers" id="unusual-numbers"><label for="unusual-numbers">Необычные номера</label>
+                            </li>
+                            <li><input type="checkbox" name="new" id="new"><label for="new">Новинки</label>
+                            </li>
+                            <li><input type="checkbox" name="folk-groups" id="folk-groups"><label for="folk-groups">Народные коллективы</label>
+                            </li>
+                            <li><input type="checkbox" name="100" id="circus-numbers"><label for="circus-numbers">Цирковые номера</label>
+                            </li>
+                            <li><input type="checkbox" name="dj" id="dj"><label for="dj">Диджеи</label>
+                            </li>
+                            <li><input type="checkbox" name="100" id="famous-artists"><label for="famous-artists">Известные артисты</label>
+                            </li>
+                            <li><input type="checkbox" name="100" id="original-genre"><label for="original-genre">Оригинальный жанр</label>
+                            </li>
+                            <li><input type="checkbox" name="100" id="animals"><label for="animals">Животные</label>
+                            </li>
+                            <li><input type="checkbox" name="100" id="decoration"><label for="decoration">Оформление</label>
+                            </li>
+                            <li><input type="checkbox" name="other" id="other"><label for="other">Прочее</label>
+                            </li>
+                        </ul>
+                        <div class="find-button"><a class="find" href="search-page.html">Найти</a></div>
+                    </form>
+                </div>
+                <div class="center-column-2">
+                    <div class="img-wrapper">
+                        <a href="#"><img class="index-photo" src="img/1.jpg" width="210" height="140" alt="jackson"></a>
+                    </div>
+                    <div class="img-wrapper">
+                        <a href="#"><img class="index-photo" src="img/1_s1m.jpg" width="210" height="140" alt=""></a>
+                    </div>
+                    <div class="img-wrapper">
+                        <a href="#"><img class="index-photo" src="img/1_s444m.jpg" width="210" height="140" alt="sax"></a>
+                    </div>
+                    <div class="img-wrapper">
+                        <a href="#"><img class="index-photo" src="img/3.jpg" width="210" height="140" alt=""></a>
+                    </div>
+                    <div class="img-wrapper">
+                        <a href="#"><img class="index-photo" src="img/1_s5m.jpg" width="210" height="140" alt=""></a>
+                    </div>
+                    <a href="#"><img class="index-photo" src="img/1_sm.jpg" width="210" height="140" alt=""></a>
+                </div>
+            </div>
+
+            <section>
+                <p class="promo-text-1">Как найти и выбрать хорошего артиста? База артистов Artistlist c прямыми контактами артистов поможет вам в этом. Смотрите видео артистов
+                    и другие промо материалы. Определитесь с бюджетом мероприятия. И не всегда цена которую просит артист,
+                    соответствует качеству. Как правило, вы платите за "имя" артиста, а не за качество. Если бюджет ограничен,
+                    вы можете в нашей базе найти "недорогого" и не очень известного артиста, но с великолепным репертуаром
+                    и номерами. И вы, и ваши гости останетесь довольны и приятно удивлены. Особое внимание стоит обратить
+                    на видео артиста, так как в видео тежелее скрыть недостатки. Большая просьба для артистов: при размещении
+                    промо-материалов явно указывать цену. Анкеты с ценами на услуги имеют более высокий рейтинг и ценность
+                    для базы артистов Artistlist. С уважением, администрация сайта База артистов Artistlist.
+                </p>
+            </section>
+        </div>
+    </main>
+    <footer class="footer-wrapper">
+        <div class="container">
+            <div class="up-header">
+                <div class="logo">
+                    <a href="/"><img src="img/logo2.png" width="184" height="103" alt="ArtistList logo"></a>
+                </div>
+                <div>
+                    <a href="index.html" class="header-title__link"><h2 class="footer-title">Каталог артистов ArtistList</h2></a> 
+                </div>
+                <div class="contact">
+                    <a href="mailto:start@artistlist.ru">Контакты</a>
+                </div>
+                <div class="footer-link"><a class="add-artist" href="#">Добавить артиста</a>
+                </div>
+                <div class="footer-link"><a class="add-artist" href="#">Добавить группу</a>
+                </div>
+            </div>
+            <div class="admin-promo">
+                <p><a href="mailto:info@artistlist.ru">Особенное размещение</a></p>
+                <p><a href="mailto:info@artistlist.ru">&#169;mikky.media</a></p>
+            </div>
+        </div>
+    </footer>
+    <!--pop up form-->
+    <div class="pop-up">
+        <form class="add-artist-form" enctype="multipart/form-data" action="http://echo.htmlacademy.ru" method="post">
+            <button class="pop-up-close" type="button" title="Закрыть">Закрыть</button>
+            <fieldset>
+                <legend>Анкета артиста, группы</legend>
+                <div class="name-artist-pop-up">
+                    <label for="name">Название артиста, группы:</label>
+                    <input type="text" id="name" name="name-artist" size="30" placeholder="Представьтесь, пожалуйста&#42;" required>
+                </div>
+                <div class="style-artist">
+                    <label for="name">Жанр:</label>
+                    <select name="style-artist" required>
+                            <option value="пустое поле" selected></option>
+                            <option value="style-artist">Ведушие</option>
+                            <option value="style-artist">Кавер-группы</option>
+                            <option value="style-artist">Вокалисты</option>
+                            <option value="style-artist">Музыканты</option>
+                            <option value="style-artist">Танцевальные шоу</option>
+                            <option value="style-artist">Новинки</option>
+                            <option value="style-artist">Народные коллективы</option>
+                            <option value="style-artist">Цирковые номера</option>
+                            <option value="style-artist">Диджеи</option>
+                            <option value="style-artist">Известные артисты</option>
+                            <option value="style-artist">Необычные номера</option>
+                            <option value="style-artist">Оригинальный жанр</option>
+                            <option value="style-artist">Животные</option>
+                            <option value="style-artist">Оформление</option>
+                            <option value="style-artist">Прочее</option>
+                        </select>
+                </div>
+                <div class="price-artist-pop-up">
+                    <label for="price">Диапазон цен "обычного" выступления:</label>
+                    (пожалуйста указывайте диапазон цены "обычного" выступления, а не max или min значение)
+                    <select name="price-pop-up" required>
+                            <option value="price"></option>
+                            <option value="price">до 5000 руб.</option>
+                            <option value="price">от 5000-10000 рублей</option>
+                            <option value="price">от 10000-20000 рублей</option>
+                            <option value="price">от 20000-50000 рублей</option>
+                            <option value="price">от 50000-100000 рублей</option>
+                            <option value="price">более 100000 рублей</option>
+                    </select>
+                </div>
+                <div class="name-artist-pop-up">
+                    <label for="price2">Цена одно значение:</label>
+                    (пожалуйста указывайте цену "вашего обычного по продолжительности и формату" выступления, за которую вы готовы выступить, выехать к заказчику)
+                    <input type="text" id="price2" name="name-artist" size="30" placeholder="Цена цифрой(одно значение)&#42;" required>
+                </div>
+                <div class="video-links-pop-up">
+                    <label for="video-links">Ссылки на видео:</label>
+                    <textarea id="video-links" size="50" name="video-links" placeholder="от одной до 6 ссылок на ваши видео на youtube через пробел или запятую"></textarea>
+                </div>
+
+                <div class="phone-pop-up">
+                    <label for="tel1">Телефон:</label>
+                    <input type="tel" id="tel1" name="phone-pop-up-a" placeholder="основной номер&#42;" required>
+                    <label for="name2">Контактное лицо:</label>
+                    <input type="text" id="name2" name="name-contact" placeholder="контактное лицо">
+                </div>
+                <div class="phone-pop-up">
+                    <label for="tel2">Доп.телефон:</label>
+                    <input type="text" id="tel2" name="phone-pop-up-b" placeholder="доп.телефон">
+                </div>
+                <div class="email-field">
+                    <label for="mail">Ваш e-mail:</label>
+                    <input type="email" id="mail" name="email" placeholder="Для связи с Вами&#42;" required>
+                </div>
+                <div class="site-field">
+                    <label for="site">Адрес сайта:</label>
+                    <input type="url" id="site" name="site" placeholder="Адрес сайта">
+                </div>
+                <div class="description-little">
+                    <label for="letter" align="center">Краткое описание:</label>
+                    <textarea id="letter" name="description-little" maxlength="500" placeholder="Основная информация" required></textarea>
+                </div>
+                <div class="description-max">
+                    <label for="letter">Полное описание:</label>
+                    <textarea id="letter" name="description-max" placeholder="В свободной форме" required></textarea>
+                </div>
+                <div class="name-artist-pop-up">
+                    <label>Загрузите несколько фотографий(чтобы загрузить несколько фото выделите их мышью):</label>
+                    <input type="file" name="photo[]" multiple accept="image/jpeg">
+                </div>
+                <div class="pop-up-submit">
+                    <button type="submit" class="send-btn">Отправить</button>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+    <!--pop up login-->
+    <form id="pop-up-login" class="pop-up-login">
+        <div class="login">
+            <button id="login-close" class="login-close" type="button">X</button>
+            <label class="login-label" for="login">Логин</label>
+            <input class="login-input" type="text" id="login" placeholder="Введите логин Ваша почта">
+            <label for="parol">Пароль</label>
+            <input class="login-input" type="text" id="parol" placeholder="Введите пароль">
+            <button class="login-send-btn">Войти</button>
+            <div id="repeat-parol" class="repeat-parol">Вспомнить пароль</div>
+        </div>
+    
+    </form>
+    <!-- pop-up-repeat -->
+    <form id="pop-up-repeat-login" class="pop-up-repeat-login">
+        <div class="repeat-close" id="repeat-close">x</div>
+        <img class="repeat-captcha" src="img/captcha.jpg" width="325" height="99">
+    <button id="repeat__btn" class="repeat-btn">Напомнить</button>
+    </form>
+    
+    <script src="js/modal-window.js"></script>
+</body>
+
+</html>
+\
